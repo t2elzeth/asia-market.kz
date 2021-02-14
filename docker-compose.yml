@@ -4,12 +4,8 @@ services:
   web:
     build:
       context: .
-    ports:
-      - "8000:8000"
-    image: imtkg
     volumes:
       - .:/app/
-      - ./staticfiles:/app/staticfiles
   nginx:
     build: ./production/nginx
     volumes:
