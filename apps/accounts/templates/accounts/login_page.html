@@ -1,0 +1,71 @@
+{% load static %}
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AziaMarket</title>
+
+    <!-- -------------------------------- links -------------------------------- -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/reglog_page.css' %}">
+    <link rel="stylesheet" href="{% static 'css/media.css' %}">
+</head>
+
+<body>
+<div class="wrapper">
+    <!-- ------------------------------- header -------------------------------- -->
+    <header class="header">
+        <!-- nav -->
+        <nav class="nav">
+            <!-- logo -->
+            <div class="logo">
+                <img src="{% static 'img/logo.png' %}" alt="logo">
+            </div>
+            <!-- nav_bar -->
+            <div class="nav_bar">
+                <!-- burger -->
+                <div class="burder_menu">
+                    <span></span>
+                </div>
+                <!-- menu -->
+                <ul id="main-menu" class="menu">
+                    <!-- <li><a href="#" class="link active">Курсы вождения</a></li> -->
+                    <li><a href="#" class="link">ГЛАВНАЯ</a></li>
+                    <li><a href="#" class="link">КАТАЛОГ</a></li>
+                    <li><a href="#" class="link">ТАРИФЫ</a></li>
+                    <li><a href="#" class="link">О НАС</a></li>
+                    <li><a href="#" class="link">ЛИЧНЫЙ КАБИНЕТ</a></li>
+                    <li><a href="#" class="link">КОНТАКТЫ</a></li>
+                    <li><a href="#" class="call_quar">звонок</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="content_reglog">
+            <h1>Вход:</h1>
+            <!-- form -->
+            <form method="post" action="">
+                {% csrf_token %}
+                <div>
+                    <input type="email" name="email" placeholder="Почта" required>
+                </div>
+                <div>
+                    <input type="password" name="password" placeholder="Пароль" required>
+                </div>
+                <button type="submit">Войти</button>
+            </form>
+        </div>
+
+        <a href="#" class="icon_quarter"><i class="fas fa-comments"></i></a>
+    </header>
+
+
+</div>
+
+<!-- ------------------------------- scripts ------------------------------- -->
+<script src="{% static 'js/jquery-3.5.1.js' %}"></script>
+<script src="{% static 'js/script.js' %}"></script>
+<script src="https://kit.fontawesome.com/0f50a82545.js"></script>
+</body>
+
+</html>

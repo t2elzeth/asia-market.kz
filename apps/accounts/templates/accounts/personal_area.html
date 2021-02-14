@@ -1,0 +1,89 @@
+{% load static %}
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AziaMarket</title>
+
+    <!-- -------------------------------- links -------------------------------- -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/personal_area.css' %}">
+    <link rel="stylesheet" href="{% static 'css/media.css' %}">
+</head>
+
+<body>
+<div class="wrapper">
+    <!-- ------------------------------- header -------------------------------- -->
+    <header class="header">
+        <!-- nav -->
+        <nav class="nav">
+            <!-- logo -->
+            <div class="logo">
+                <i class="users fas fa-user"></i>
+                <p>личный кабинет</p>
+            </div>
+            <!-- nav_bar -->
+            <div class="nav_bar">
+                <!-- burger -->
+                <div class="burder_menu">
+                    <span></span>
+                </div>
+                <!-- menu -->
+                <ul id="main-menu" class="menu">
+                    <!-- <li><a href="#" class="link active">Курсы вождения</a></li> -->
+                    <li><a href="#" class="link">ГЛАВНАЯ</a></li>
+                    <li><a href="#" class="link">ПРОГРАММЫ</a></li>
+                    <li><a href="#" class="link">О НАС</a></li>
+                    <li><a href="#" class="link">ГАРАНТИИ</a></li>
+                    <li><a href="#" class="link">КОНТАКТЫ</a></li>
+                    <li><a href="#" class="call_quar">звонок</a></li>
+                    <li><a href="#" class="call_quar">написать</a></li>
+                </ul>
+
+            </div>
+        </nav>
+        <div class="open_personal">
+            <div class="walet">
+                <i class="fas fa-wallet"></i><span>{{ user.balance }}</span><span>$</span>
+            </div>
+            <div class="open_personal_content">
+                <div class="informations">
+                    <div class="information">
+                        <i class="fas fa-user"></i><span>ФИО:</span><span>{{ user.full_name }}</span>
+                    </div>
+                    <div class="information">
+                        <i class="fas fa-id-card"></i><span>ИИН:</span><span>{{ user.iin }}</span>
+                    </div>
+                    <div class="information">
+                        <i class="fas fa-envelope"></i><span>Почта:</span><span>{{ user.email }}</span>
+                    </div>
+                    <div class="information">
+                        <i class="fas fa-mobile-alt"></i><span>Номер телефона:</span><span>{{ user.phone }}</span>
+                    </div>
+                    <div class="information">
+                        <i class="fas fa-mobile-alt"></i><span><a
+                            href="{{ user.referral_link }}">Реферальная ссылка</a></span>
+                    </div>
+                    <div class="information">
+                        <i class="fas fa-mobile-alt"></i><span>Количество рефералов:</span><span>{{ user.referrals_number }}</span>
+                    </div>
+                </div>
+                <div class="pesonal_img">
+                    <img src="" alt="">
+                </div>
+            </div>
+        </div>
+        <a href="#" class="icon_quarter"><i class="fas fa-comments"></i></a>
+    </header>
+
+
+</div>
+
+<!-- ------------------------------- scripts ------------------------------- -->
+<script src="{% static 'js/jquery-3.5.1.js' %}"></script>
+<script src="{% static 'js/script.js' %}"></script>
+<script src="https://kit.fontawesome.com/0f50a82545.js"></script>
+</body>
+
+</html>

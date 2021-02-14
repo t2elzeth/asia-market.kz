@@ -1,0 +1,204 @@
+
+
+.header{
+    background: url(../img/bg4.png) no-repeat center top / cover;
+}
+
+nav{
+    position: absolute;
+    width: 100%;
+    background: initial;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    height: 130px;
+}
+.header nav .logo{
+    display: flex;
+    align-items: center;
+}
+.header nav .users{
+    color: white;
+    font-size: 30px;
+}
+.header nav .logo p{
+    font-size: 1.5em;
+    text-transform: uppercase;
+    margin: 0 0 0 30px;
+    color: white;
+}
+/* burger */
+.burder_menu{
+    display: block;
+    position: fixed;
+}
+.burder_menu:before{
+    background: white;
+}
+.burder_menu:after{
+    background: white;
+}
+.burder_menu span{
+    background: white;
+}
+/* active */
+.burder_menu.active:before{
+    background: black;
+}
+.burder_menu.active:after{
+    background: black;
+}
+.burder_menu.active span{
+    background: black;
+}
+body.lock{
+    overflow: hidden;
+    z-index: 1000;
+}
+/* menu id */
+#main-menu{
+    position: fixed;
+    background: white;
+    padding: 150px 0 50px 0;
+    top: -30px;
+    right: -570px;
+    transition: 0.4s ease 0s;
+    overflow:hidden auto;
+    width: 500px;
+    height: 110%;
+    z-index: 10000;
+}
+#main-menu.active{
+    right: -100px;
+    padding: 150px 20px 100px 20px;
+}
+nav .nav_bar .menu{
+    flex-direction: column; 
+    text-align: center;
+}
+#main-menu li{
+    display: inline-block;
+}
+#main-menu li .link{
+    display: inline-block;
+    font-size: 1.8em;
+    margin: 5% 60px;
+}
+nav .nav_bar  .call_quar{
+    margin: 0 40px 0 0;
+    display:inline-block;
+}
+
+.open_personal{
+    position: relative;
+    top: 130px;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    padding: 50px ;
+    margin: auto;
+    min-height: 700px;
+    background: rgba(255, 255, 255, 0.2); 
+    backdrop-filter: blur(20px); 
+}
+.open_personal .walet{
+    font-size: 2.5em;
+    color: black;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    text-align: right;
+}
+.open_personal .open_personal_content{
+    display: flex;
+    align-items:center;
+    justify-content: space-between;
+}
+.open_personal .informations{
+    border-left: 2px solid black;
+    padding: 0 0 0 20px;
+}
+
+.open_personal .informations .information{
+    font-size: 2em;
+    margin: 20px 0;
+}
+.open_personal .informations .information i{
+    margin: 0 20px 0 0;
+}
+.open_personal .informations .information span:last-child{
+    margin: 0 0 0 20px;
+}
+.open_personal .open_personal_content .pesonal_img{
+    width: 100%;
+    max-width: 300px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    min-height: 300px;
+    justify-content: center;
+}
+
+@media(max-width:1650px){
+    .open_personal{
+        top: 100px;
+        padding: 30px ;
+    }
+    .open_personal .open_personal_content{
+        flex-direction: column;
+    }
+    .open_personal .informations{
+        order: 2;
+    }
+    .open_personal .open_personal_content .pesonal_img{
+        max-width: 200px;
+        min-height: 200px;
+        order: 1;
+    }
+}
+@media(max-width:1070px){
+    .open_personal .informations .information{
+        font-size: 1.5em;
+    }
+}
+@media(max-width:850px){
+    /* burger_menu */
+    .burder_menu{
+        display: none;
+        position: relative;
+        top: 100px;
+        right: 100px;
+        width: 40px;
+        height: 40px;
+        z-index: 100000;
+        transition: 0.3s ease-in;
+    }
+    /* open_personal */
+    .open_personal{
+        width: 90%;
+        top: 150px;
+    }
+    .open_personal .walet{
+        font-size: 1.2em;
+    }
+    .open_personal .informations .information{
+        font-size: 1em;
+    }
+    .open_personal .open_personal_content .pesonal_img{
+        max-width: 150px;
+        min-height: 150px;
+        order: 1;
+    }
+}
+@media(max-width:400px){
+    .open_personal .informations .information{
+        font-size: 0.7em;
+    }
+    .open_personal .open_personal_content .pesonal_img{
+        max-width: 100px;
+        min-height: 100px;
+        order: 1;
+    }
+}

@@ -1,0 +1,20 @@
+version: "3.8"
+
+services:
+  web:
+    build:
+      context: .
+    ports:
+      - "8000:8000"
+    image: imtkg
+    volumes:
+      - .:/app/
+      - ./staticfiles:/app/staticfiles
+  nginx:
+    build: ./production/nginx
+    volumes:
+      - ./staticfiles:/app/static
+    ports:
+      - "8920:80"
+    depends_on:
+      - web

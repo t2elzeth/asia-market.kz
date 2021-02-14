@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Jura&display=swap');
+
+.content_reglog{
+    width: 100%;
+    position: relative;
+    z-index: 1;
+    top: 130px;
+    padding: 40px 0 50px 0;
+}
+.header .content_reglog h1{
+    font-size: 3.5em;
+    color: black;
+    font-weight: 400;
+    text-align: center;
+}
+
+.header  .buttons_reglog a:hover{
+    background: black;
+    color: white;
+}
+
+/* ---------------------------------- forms --------------------------------- */
+.content_reglog form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 80px 10px 0 10px;
+    
+}
+.content_reglog form div{
+    display: block;
+    width: 100%;
+    max-width: 550px;
+}
+.content_reglog form input{
+    display: block;
+    width: 100%;
+    max-width: 550px;
+    padding: 10px;
+    margin: 15px 0 ;
+    border-radius:10px;
+    font-size: 1.5em;
+}
+.content_reglog form input::-webkit-input-placeholder{
+    color: black;
+    font-weight: 600;
+}
+.content_reglog form input::after{
+    content:"";
+    position: absolute;
+    width: 2px;
+    height: 100px;
+    background: black;
+    display: block;
+}
+.content_reglog form button{
+    background: inherit;
+    border-radius:5px;
+    padding: 10px;
+    text-align: center;
+    margin: 40px 0 0  0;
+    transition: 0.3s ease;
+    font-size: 1.5em;
+}
+.content_reglog form button:hover{
+    background: black;
+    color: white;
+}
+
+
+/* ---------------------------------- media --------------------------------- */
+@media(max-width:700px){
+    .header  .buttons_reglog a{
+        font-size: 1.6em;
+    }
+}
+@media(max-width:420px){
+    .header  .buttons_reglog a{
+        font-size: 1.1em;
+        padding: 10px 50px;
+    }
+    
+}
+
+
