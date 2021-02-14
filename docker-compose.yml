@@ -6,6 +6,8 @@ services:
       context: .
     volumes:
       - .:/app/
+    environment:
+      COMPOSE_DOCKER_CLI_BUILD: 0
   nginx:
     build: ./production/nginx
     volumes:
@@ -14,3 +16,5 @@ services:
       - "8920:80"
     depends_on:
       - web
+    environment:
+      COMPOSE_DOCKER_CLI_BUILD: 0
