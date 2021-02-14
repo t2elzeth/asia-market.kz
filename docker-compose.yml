@@ -13,7 +13,7 @@ services:
     volumes:
       - ./staticfiles:/app/static
     ports:
-      - "8920:80"
+      - "80:80"
     depends_on:
       - web
     environment:
