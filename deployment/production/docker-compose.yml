@@ -5,6 +5,9 @@ services:
     build: ../../backend/
     volumes:
       - ../../backend:/app/
+    environment:
+      DJANGO_ADMIN_USERNAME: asiamarket676@mail.ru
+      DJANGO_ADMIN_PASSWORD: 82738899
   nginx:
     build: ./nginx
     volumes:
