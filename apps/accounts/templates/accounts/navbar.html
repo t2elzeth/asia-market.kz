@@ -1,0 +1,32 @@
+{% load static %}
+<nav class="nav">
+    <!-- logo -->
+    <div class="logo">
+        <img src="{% static 'img/logo.png' %}" alt="logo">
+    </div>
+    <!-- nav_bar -->
+    <div class="nav_bar">
+        <!-- burger -->
+        <div class="burder_menu">
+            <span></span>
+        </div>
+        <!-- menu -->
+        <ul id="main-menu" class="menu">
+            <li><a href="/" class="link">ГЛАВНАЯ</a></li>
+            <li><a href="#" class="link">ПРОГРАММЫ</a></li>
+            <li><a href="/page/o-nas.html" class="link">О НАС</a></li>
+            <li><a href="#" class="link">ГАРАНТИИ</a></li>
+            <li><a href="/contacts.html" class="link">КОНТАКТЫ</a></li>
+            {% if user.is_authenticated %}
+                <li><a href="{% url 'personal-area' %}" class="link">Личный кабинет</a></li>
+                <li><a href="{% url 'logout' %}" class="link">Выйти</a></li>
+
+            {% else %}
+                <li><a href="{% url 'login' %}" class="link">Вход</a></li>
+                <li><a href="{% url 'signup' %}" class="link">Регистрация</a></li>
+            {% endif %}
+            <li><a href="#" class="call_quar">звонок</a></li>
+            <li><a href="#" class="call_quar">написать</a></li>
+        </ul>
+    </div>
+</nav>

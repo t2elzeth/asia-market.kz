@@ -34,18 +34,18 @@
                     <!-- <li><a href="#" class="link active">Курсы вождения</a></li> -->
                     <li><a href="#" class="link">ГЛАВНАЯ</a></li>
                     <li><a href="#" class="link">ПРОГРАММЫ</a></li>
-                    <li><a href="#" class="link">О НАС</a></li>
+                    <li><a href="/page/o-nas.html" class="link">О НАС</a></li>
                     <li><a href="#" class="link">ГАРАНТИИ</a></li>
-                    <li><a href="#" class="link">КОНТАКТЫ</a></li>
+                    <li><a href="/contacts.html" class="link">КОНТАКТЫ</a></li>
+                    <li><a href="{% url 'logout' %}" class="link">Выйти</a></li>
                     <li><a href="#" class="call_quar">звонок</a></li>
                     <li><a href="#" class="call_quar">написать</a></li>
                 </ul>
-
             </div>
         </nav>
         <div class="open_personal">
             <div class="walet">
-                <i class="fas fa-wallet"></i><span>{{ user.balance }}</span><span>$</span>
+                <i class="fas fa-wallet"></i><span>{{ user.balance }}</span><span>₸</span>
             </div>
             <div class="open_personal_content">
                 <div class="informations">
