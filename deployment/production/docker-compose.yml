@@ -1,0 +1,18 @@
+version: "3.8"
+
+services:
+  web:
+    build: ../../backend/
+    volumes:
+      - ../../backend:/app/
+  nginx:
+    build: ./nginx
+    volumes:
+      - ../../backend/staticfiles:/app/static
+      - ../../httpdocs:/app/http
+      - /etc/letsencrypt:/etc/letsencrypt
+    ports:
+      - "80:80"
+      - "443:443"
+    depends_on:
+      - web

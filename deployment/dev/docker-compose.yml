@@ -1,0 +1,16 @@
+version: "3.8"
+
+services:
+  web:
+    build: ../../backend/
+    volumes:
+      - ../../backend:/app/
+  nginx:
+    build: ./nginx
+    volumes:
+      - ../../backend/staticfiles:/app/static
+      - ../../httpdocs:/app/http
+    ports:
+      - "8920:80"
+    depends_on:
+      - web
