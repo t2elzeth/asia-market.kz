@@ -65,3 +65,7 @@ class LogoutView(View):
 class PersonalAreaView(CustomLoginRequiredMixin, View):
     def get(self, request):
         return render(request, 'accounts/personal_area.html')
+
+
+def csrf_failure(request, *args, **kwargs):
+    return HttpResponse('Ошибка. Обновите страничку и попробуйте снова')
