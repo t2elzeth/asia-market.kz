@@ -18,12 +18,11 @@
             <li><a href="#" class="link">ГАРАНТИИ</a></li>
             <li><a href="/contacts.html" class="link">КОНТАКТЫ</a></li>
             {% if user.is_authenticated %}
-                <li><a href="{% url 'personal-area' %}" class="link">Личный кабинет</a></li>
-                <li><a href="{% url 'logout' %}" class="link">Выйти</a></li>
-
+                <li><a href="{% url 'personal-area' %}" class="link">ЛИЧНЫЙ КАБИНЕТ</a></li>
+                <li><a href="{% url 'logout' %}" class="link">ВЫЙТИ</a></li>
             {% else %}
-                <li><a href="{% url 'login' %}" class="link">Вход</a></li>
-                <li><a href="{% url 'signup' %}" class="link">Регистрация</a></li>
+                <li><a href="{% url 'login' %}" class="link">ВХОД</a></li>
+                <li><a href="{% url 'signup' %}" class="link">РЕГИСТРАЦИЯ</a></li>
             {% endif %}
             <li><a href="#" class="call_quar">звонок</a></li>
             <li><a href="#" class="call_quar">написать</a></li>
