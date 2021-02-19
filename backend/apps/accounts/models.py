@@ -17,7 +17,7 @@ class User(AbstractBaseUser, PermissionsMixin):
                                     blank=True, verbose_name='Реферал пользователя')
     full_name = models.CharField(max_length=255, verbose_name='Ф.И.О.')
     iin = models.CharField(max_length=255, verbose_name='ИИН')
-    email = models.EmailField(max_length=255, unique=True, verbose_name='Почта')
+    email = models.EmailField(max_length=255, unique=True)
     phone = models.CharField(max_length=255, verbose_name='Телефон')
     balance = models.PositiveIntegerField(default=0, verbose_name='Баланс')
 
