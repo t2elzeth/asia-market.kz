@@ -30,7 +30,7 @@ class SignUpView(generic.CreateView):
         return response
 
     def form_invalid(self, form):
-        return HttpResponse('Невалидные данные в форме. Возможно пользователь с данным email или ИИН уже существует')
+        return HttpResponse('Невалидные данные в форме. Возможно пользователь с данным email уже существует')
 
 
 class SignUpAsReferralView(SignUpView):
