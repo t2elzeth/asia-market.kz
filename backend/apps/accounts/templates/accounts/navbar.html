@@ -13,9 +13,7 @@
         <!-- menu -->
         <ul id="main-menu" class="menu">
             <li><a href="/" class="link">ГЛАВНАЯ</a></li>
-            <li><a href="#" class="link">ПРОГРАММЫ</a></li>
             <li><a href="/page/o-nas.html" class="link">О НАС</a></li>
-            <li><a href="#" class="link">ГАРАНТИИ</a></li>
             <li><a href="/contacts.html" class="link">КОНТАКТЫ</a></li>
             {% if user.is_authenticated %}
                 <li><a href="{% url 'personal-area' %}" class="link">ЛИЧНЫЙ КАБИНЕТ</a></li>
