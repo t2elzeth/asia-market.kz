@@ -55,7 +55,7 @@ class LoginView(View):
             return HttpResponse('Неверная почта или пароль')
 
 
-class LogoutView(View):
+class LogoutView(LoginRequiredMixin, View):
     def get(self, request):
         if request.user.is_authenticated:
             logout(request)
