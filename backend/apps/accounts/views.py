@@ -1,11 +1,11 @@
 from django.contrib.auth import get_user_model, authenticate, login, logout
+from django.contrib.auth.mixins import LoginRequiredMixin
 from django.http import HttpResponse
 from django.shortcuts import render, redirect
 from django.urls import reverse_lazy
 from django.views import generic, View
 
 from .forms import SignUpForm, LoginForm
-from .mixins import CustomLoginRequiredMixin
 
 User = get_user_model()
 
@@ -62,7 +62,7 @@ class LogoutView(View):
         return redirect(reverse_lazy('login'))
 
 
-class PersonalAreaView(CustomLoginRequiredMixin, View):
+class PersonalAreaView(LoginRequiredMixin, View):
     def get(self, request):
         return render(request, 'accounts/personal_area.html')
 
